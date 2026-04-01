@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Login | Tirth Shah</title>
+  <meta name="description" content="Login page for the portfolio admin dashboard." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <div class="bg-effects" aria-hidden="true">
+    <span class="blur-circle circle-1"></span>
+    <span class="blur-circle circle-2"></span>
+    <span class="blur-circle circle-3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="/" class="logo">
+        <span class="logo-box">TS</span>
+        <span>Portfolio Login</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Back to Site</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <div class="container">
+      <section class="admin-login">
+        <div class="admin-login-card glass">
+          <p class="section-tag">Admin Access</p>
+          <h1>Sign in to open the portfolio dashboard.</h1>
+          <p class="login-note">
+            Use your Gmail ID and admin password to unlock the content studio.
+          </p>
+
+          <form class="admin-login-form" id="siteLoginForm" autocomplete="off">
+            <label>
+              Gmail ID
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="Enter Gmail ID"
+                autocomplete="email"
+                required
+              />
+            </label>
+
+            <label>
+              Admin Password
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Enter admin password"
+                autocomplete="new-password"
+                required
+              />
+            </label>
+
+            <button type="submit" class="btn btn-primary">Open Dashboard</button>
+          </form>
+
+          <p class="admin-note" id="loginNote"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
