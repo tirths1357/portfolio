@@ -1,0 +1,221 @@
+{
+  "identity": {
+    "name": "Tirth Shah",
+    "role": "Computer Engineering Student",
+    "emailSubject": "Portfolio Inquiry"
+  },
+  "hero": {
+    "tag": "Computer Engineering Student",
+    "headingPrefix": "Building",
+    "headingHighlight": "data-driven projects",
+    "headingSuffix": "with Python, analysis, and modern web skills.",
+    "intro": "I'm Tirth Shah, a Computer Engineering student at SVIT, GTU with a strong interest in Python, data analysis, AI-based ideas, and practical solutions that solve real problems.",
+    "focusedLabel": "Focused on:",
+    "focusedOn": [
+      "Python coding and automation",
+      "Data analysis and insights",
+      "AI and machine learning basics",
+      "Real-world engineering projects"
+    ],
+    "primaryCtaText": "View My Work",
+    "secondaryCtaText": "Contact Me",
+    "stats": [
+      {
+        "value": "7.5",
+        "label": "Current CGPA"
+      },
+      {
+        "value": "2+",
+        "label": "Major Project Highlights"
+      },
+      {
+        "value": "2023-27",
+        "label": "Engineering Journey"
+      }
+    ],
+    "profileLabel": "Profile Snapshot",
+    "profileBio": "Python-focused engineering student interested in AI, data analysis, algorithmic thinking, and building useful digital solutions.",
+    "profileSkills": [
+      "Python",
+      "Data Analysis",
+      "Machine Learning",
+      "FastAPI",
+      "AI Automation",
+      "Mathematics"
+    ],
+    "profileCode": [
+      "const student = \"Tirth Shah\";",
+      "const focus = [\"Python\", \"AI\", \"Data Analysis\"];",
+      "buildUsefulSolutions(student, focus);"
+    ]
+  },
+  "about": {
+    "heading": "Computer Engineering student with strong Python and data analysis fundamentals.",
+    "intro": "I am seeking opportunities where I can apply analytical thinking, programming skills, and project experience to create useful, data-driven solutions. I enjoy learning by building and improving practical systems with clean logic and thoughtful design.",
+    "summaryTitle": "Profile Summary",
+    "summaryBody": "My strengths include Python coding, data analysis, mathematics, algorithmic thinking, and basic AI or machine learning concepts. I am especially interested in creating systems that help users make better decisions with real information.",
+    "highlights": [
+      {
+        "title": "Core Strength",
+        "text": "Proficient in mathematics and analytical thinking"
+      },
+      {
+        "title": "Current Goal",
+        "text": "Apply programming and data skills in an entry-level technical role"
+      }
+    ],
+    "skills": [
+      {
+        "icon": "Py",
+        "title": "Python Coding",
+        "description": "Building logical solutions and data-based applications."
+      },
+      {
+        "icon": "DA",
+        "title": "Data Analysis",
+        "description": "Turning data into useful insights and decisions."
+      },
+      {
+        "icon": "ML",
+        "title": "AI / ML Basics",
+        "description": "Exploring intelligent systems and machine learning concepts."
+      },
+      {
+        "icon": "WD",
+        "title": "Website Design",
+        "description": "Creating modern and clean websites with frontend tools."
+      },
+      {
+        "icon": "AD",
+        "title": "Algorithms",
+        "description": "Applying analysis and design of algorithms in problem solving."
+      },
+      {
+        "icon": "MT",
+        "title": "Mathematics",
+        "description": "Using strong quantitative foundations to support technical work."
+      }
+    ]
+  },
+  "experience": {
+    "heading": "Hands-on project and innovation experiences from competitions and camps.",
+    "items": [
+      {
+        "number": "2024",
+        "title": "MECIA HACKS 2.0 | SVIT SSIP",
+        "description": "Built a QR and barcode based medicine identification system to detect expired medicines. The project extracted manufacturing and expiry information, verified authenticity, and focused on validation logic with a user-friendly interface.",
+        "linkLabel": "Ask About This Project",
+        "linkUrl": "#contact",
+        "openInNewTab": false
+      },
+      {
+        "number": "2025",
+        "title": "AI-ML Innovation Camp | IBM SkillsBuild",
+        "description": "Participated in the innovation camp and worked on AI-oriented thinking, smart systems, and practical problem solving using modern tools and analytical methods.",
+        "linkLabel": "View Project Highlight",
+        "linkUrl": "#kissanmitra-project",
+        "openInNewTab": false
+      },
+      {
+        "number": "Focus",
+        "title": "Entry-Level Growth Path",
+        "description": "Looking for opportunities to apply Python, data analysis, machine learning basics, and engineering problem solving in professional environments.",
+        "linkLabel": "Connect With Me",
+        "linkUrl": "#contact",
+        "openInNewTab": false
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projects that reflect real-world problem solving and practical engineering thinking.",
+    "intro": "My work focuses on combining technical logic, meaningful data, and useful interfaces to create solutions that solve actual user problems.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Medicine Identification System",
+        "description": "A QR and barcode medicine verification system designed to detect expired medicines by reading encoded product details and validating manufacturing and expiry dates.",
+        "linkLabel": "Request Details",
+        "linkUrl": "#contact",
+        "id": "",
+        "openInNewTab": false
+      },
+      {
+        "number": "02",
+        "title": "KissanMitra",
+        "description": "An AI-based smart farming solution with weather forecasting, temperature tracking, crop health monitoring, and actionable insights to support farmers in irrigation, harvesting, and crop protection decisions.",
+        "linkLabel": "Open Live Project",
+        "linkUrl": "https://kissanmitra-five.vercel.app/",
+        "id": "kissanmitra-project",
+        "openInNewTab": true
+      },
+      {
+        "number": "03",
+        "title": "Portfolio Contact Platform",
+        "description": "A premium portfolio website connected to a real database, admin dashboard, and Gmail-ready contact system to support communication and project visibility.",
+        "linkLabel": "Start a Conversation",
+        "linkUrl": "#contact",
+        "id": "",
+        "openInNewTab": false
+      }
+    ]
+  },
+  "services": {
+    "heading": "A blend of programming, analysis, and project-focused learning.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Python Development",
+        "description": "Creating logical, structured solutions using Python for practical applications and analysis."
+      },
+      {
+        "number": "02",
+        "title": "Data-Driven Thinking",
+        "description": "Using data analysis techniques to support better decision-making and useful outcomes."
+      },
+      {
+        "number": "03",
+        "title": "Problem Solving",
+        "description": "Applying mathematics, algorithmic thinking, and engineering discipline to solve challenges."
+      }
+    ]
+  },
+  "toolkit": {
+    "heading": "Technologies, interests, and strengths from my resume.",
+    "items": [
+      "Python",
+      "Data Analysis",
+      "Machine Learning",
+      "AI Automation",
+      "FastAPI",
+      "Analysis and Design Algorithm",
+      "Creative Website Design with Vibe Coding"
+    ],
+    "beyondTitle": "Beyond the classroom",
+    "beyondBody": "Outside technical work, I stay energized through team sports and table tennis, while my interest in business news and financial market trends keeps my mindset analytical, curious, and future-focused.",
+    "interests": [
+      "Team Sports",
+      "Table Tennis",
+      "Business News",
+      "Financial Market Trends"
+    ]
+  },
+  "opportunity": {
+    "tag": "Open To Opportunities",
+    "heading": "Looking for internships, collaborations, and projects that push me forward.",
+    "buttonText": "Start a Conversation"
+  },
+  "contact": {
+    "heading": "Let's connect and build something useful together.",
+    "intro": "I am open to internships, collaboration opportunities, technical discussions, and entry-level roles where I can grow while contributing value.",
+    "email": "tirths1308@gmail.com",
+    "phone": "+91 8141320360",
+    "address": "32, Shantipark Society, Sindhwaimata Road, Pratapnagar, Vadodara - 390004"
+  },
+  "resume": {
+    "href": "/assets/Tirth-Shah-Resume.pdf",
+    "buttonLabel": "View Resume",
+    "linkLabel": "Open Resume PDF",
+    "fileName": "Tirth-Shah-Resume.pdf",
+    "originalName": "Tirth Resume.pdf"
+  }
+}

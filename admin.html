@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Admin | Tirth Shah</title>
+  <meta name="description" content="Admin dashboard for portfolio content and contact messages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <div class="bg-effects" aria-hidden="true">
+    <span class="blur-circle circle-1"></span>
+    <span class="blur-circle circle-2"></span>
+    <span class="blur-circle circle-3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="/" class="logo">
+        <span class="logo-box">TS</span>
+        <span>Portfolio Admin</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Back to Site</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <div class="container">
+      <section class="admin-login" id="adminLogin">
+        <div class="admin-login-card glass">
+          <p class="section-tag">Admin Access</p>
+          <h1>Manage portfolio content and messages.</h1>
+          <p class="login-note">
+            Sign in with your Gmail ID and admin password to update the website copy, projects, resume, and contact inbox from one place.
+          </p>
+
+          <form class="admin-login-form" id="adminLoginForm" autocomplete="off">
+            <label>
+              Gmail ID
+              <input
+                type="email"
+                name="email"
+                id="adminEmail"
+                placeholder="Enter Gmail ID"
+                autocomplete="email"
+              />
+            </label>
+
+            <label>
+              Admin Password
+              <input
+                type="password"
+                name="password"
+                id="adminPassword"
+                placeholder="Enter admin password"
+                autocomplete="new-password"
+              />
+            </label>
+
+            <button type="submit" class="btn btn-primary">Open Dashboard</button>
+          </form>
+
+          <p class="admin-note" id="adminNote"></p>
+        </div>
+      </section>
+
+      <section class="admin-dashboard" id="adminDashboard" hidden>
+        <div class="admin-header">
+          <div class="admin-header-copy">
+            <p class="section-tag">Studio</p>
+            <h1>Portfolio content studio</h1>
+            <p>Keep the design, update the words, refresh projects, and replace the resume whenever you want.</p>
+          </div>
+
+          <div class="admin-actions">
+            <a href="/" class="btn btn-secondary">Open Portfolio</a>
+            <button type="button" class="btn btn-secondary" id="logoutButton">Logout</button>
+          </div>
+        </div>
+        
+        <div class="admin-stats">
+          <article class="admin-stat glass">
+            <h3 id="totalMessages">0</h3>
+            <p>Total messages</p>
+          </article>
+          <article class="admin-stat glass">
+            <h3 id="uniqueEmails">0</h3>
+            <p>Unique emails</p>
+          </article>
+          <article class="admin-stat glass">
+            <h3 id="latestMessageDate">-</h3>
+            <p>Latest message</p>
+          </article>
+        </div>
+
+        <nav class="admin-quick-nav glass" aria-label="Studio sections">
+          <a href="#heroEditorSection">Hero</a>
+          <a href="#aboutEditorSection">About</a>
+          <a href="#projectsEditorSection">Projects</a>
+          <a href="#toolkitEditorSection">Toolkit</a>
+          <a href="#opportunityContactEditorSection">Contact</a>
+          <a href="#resumeEditorSection">Resume</a>
+          <a href="#inboxSection">Inbox</a>
+        </nav>
+
+        <section class="admin-panel glass admin-editor-panel">
+          <div class="admin-toolbar">
+            <div>
+              <h2>Editable Website Content</h2>
+              <p class="admin-helper">Your name stays fixed as Tirth Shah. Everything else below can be customized.</p>
+            </div>
+          </div>
+
+          <form class="content-editor-form" id="contentEditorForm">
+            <div class="editor-section" id="heroEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Hero</p>
+                  <h3>First impression content</h3>
+                </div>
+                <p class="editor-description">Control the headline, intro, CTA labels, focused-on text, and headline stats.</p>
+              </div>
+              <div class="editor-grid editor-grid-2">
+                <label>
+                  Hero Tag
+                  <input type="text" id="contentHeroTag" />
+                </label>
+                <label>
+                  Focused Label
+                  <input type="text" id="contentFocusedLabel" />
+                </label>
+                <label>
+                  Heading Prefix
+                  <input type="text" id="contentHeroPrefix" />
+                </label>
+                <label>
+                  Heading Highlight
+                  <input type="text" id="contentHeroHighlight" />
+                </label>
+                <label class="editor-span-2">
+                  Heading Suffix
+                  <input type="text" id="contentHeroSuffix" />
+                </label>
+                <label class="editor-span-2">
+                  Hero Intro
+                  <textarea id="contentHeroIntro" rows="4"></textarea>
+                </label>
+                <label>
+                  Primary Button Text
+                  <input type="text" id="contentPrimaryCta" />
+                </label>
+                <label>
+                  Secondary Button Text
+                  <input type="text" id="contentSecondaryCta" />
+                </label>
+                <label class="editor-span-2">
+                  Focused On Items
+                  <textarea id="contentFocusedOn" rows="5" placeholder="One item per line"></textarea>
+                </label>
+              </div>
+
+              <div class="editor-subsection">
+                <div class="editor-subhead">
+                  <h4>Hero Stats</h4>
+                  <button type="button" class="btn btn-secondary admin-mini-button" data-add-target="heroStatsEditor">Add Stat</button>
+                </div>
+                <div class="editor-collection" id="heroStatsEditor"></div>
+              </div>
+            </div>
+
+            <div class="editor-section" id="profileEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Snapshot</p>
+                  <h3>Profile preview block</h3>
+                </div>
+                <p class="editor-description">Update the short profile card, code box, and chip list in the hero mockup.</p>
+              </div>
+              <div class="editor-grid editor-grid-2">
+                <label>
+                  Mini Label
+                  <input type="text" id="contentProfileLabel" />
+                </label>
+                <label class="editor-span-2">
+                  Profile Bio
+                  <textarea id="contentProfileBio" rows="4"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  Profile Skill Chips
+                  <textarea id="contentProfileSkills" rows="4" placeholder="One skill per line"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  Code Box Lines
+                  <textarea id="contentProfileCode" rows="4" placeholder="One line per row"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="editor-section" id="aboutEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">About</p>
+                  <h3>Story and strengths</h3>
+                </div>
+                <p class="editor-description">Refine your personal story, highlight blocks, and skill card content.</p>
+              </div>
+              <div class="editor-grid editor-grid-2">
+                <label class="editor-span-2">
+                  About Heading
+                  <textarea id="contentAboutHeading" rows="3"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  About Intro
+                  <textarea id="contentAboutIntro" rows="4"></textarea>
+                </label>
+                <label>
+                  Summary Title
+                  <input type="text" id="contentAboutSummaryTitle" />
+                </label>
+                <label class="editor-span-2">
+                  Summary Body
+                  <textarea id="contentAboutSummaryBody" rows="4"></textarea>
+                </label>
+              </div>
+
+              <div class="editor-subsection">
+                <div class="editor-subhead">
+                  <h4>About Highlights</h4>
+                  <button type="button" class="btn btn-secondary admin-mini-button" data-add-target="aboutHighlightsEditor">Add Highlight</button>
+                </div>
+                <div class="editor-collection" id="aboutHighlightsEditor"></div>
+              </div>
+
+              <div class="editor-subsection">
+                <div class="editor-subhead">
+                  <h4>Skill Cards</h4>
+                  <button type="button" class="btn btn-secondary admin-mini-button" data-add-target="aboutSkillsEditor">Add Skill</button>
+                </div>
+                <div class="editor-collection" id="aboutSkillsEditor"></div>
+              </div>
+            </div>
+
+            <div class="editor-section" id="experienceEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Experience</p>
+                  <h3>Events and milestones</h3>
+                </div>
+                <p class="editor-description">Show camps, competitions, and growth moments that support your portfolio story.</p>
+              </div>
+              <div class="editor-grid">
+                <label>
+                  Experience Heading
+                  <textarea id="contentExperienceHeading" rows="3"></textarea>
+                </label>
+              </div>
+              <div class="editor-subsection">
+                <div class="editor-subhead">
+                  <h4>Experience Cards</h4>
+                  <button type="button" class="btn btn-secondary admin-mini-button" data-add-target="experienceEditor">Add Experience</button>
+                </div>
+                <div class="editor-collection" id="experienceEditor"></div>
+              </div>
+            </div>
+
+            <div class="editor-section" id="projectsEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Projects</p>
+                  <h3>Featured work cards</h3>
+                </div>
+                <p class="editor-description">Add, remove, and tune project cards with custom links, ids, and button labels.</p>
+              </div>
+              <div class="editor-grid">
+                <label>
+                  Projects Heading
+                  <textarea id="contentProjectsHeading" rows="3"></textarea>
+                </label>
+                <label>
+                  Projects Intro
+                  <textarea id="contentProjectsIntro" rows="4"></textarea>
+                </label>
+              </div>
+              <div class="editor-subsection">
+                <div class="editor-subhead">
+                  <h4>Project Cards</h4>
+                  <button type="button" class="btn btn-secondary admin-mini-button" data-add-target="projectsEditor">Add Project</button>
+                </div>
+                <div class="editor-collection" id="projectsEditor"></div>
+              </div>
+            </div>
+
+            <div class="editor-section" id="servicesEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Services</p>
+                  <h3>What you bring</h3>
+                </div>
+                <p class="editor-description">Shape the service cards that explain your value in a quick, scannable way.</p>
+              </div>
+              <div class="editor-grid">
+                <label>
+                  Services Heading
+                  <textarea id="contentServicesHeading" rows="3"></textarea>
+                </label>
+              </div>
+              <div class="editor-subsection">
+                <div class="editor-subhead">
+                  <h4>Service Cards</h4>
+                  <button type="button" class="btn btn-secondary admin-mini-button" data-add-target="servicesEditor">Add Service</button>
+                </div>
+                <div class="editor-collection" id="servicesEditor"></div>
+              </div>
+            </div>
+
+            <div class="editor-section" id="toolkitEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Toolkit</p>
+                  <h3>Skills and interests</h3>
+                </div>
+                <p class="editor-description">Keep your toolkit list, interests, and beyond-the-classroom section fresh.</p>
+              </div>
+              <div class="editor-grid editor-grid-2">
+                <label class="editor-span-2">
+                  Toolkit Heading
+                  <textarea id="contentToolkitHeading" rows="3"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  Toolkit Items
+                  <textarea id="contentToolkitItems" rows="5" placeholder="One item per line"></textarea>
+                </label>
+                <label>
+                  Beyond Title
+                  <input type="text" id="contentBeyondTitle" />
+                </label>
+                <label class="editor-span-2">
+                  Beyond Body
+                  <textarea id="contentBeyondBody" rows="4"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  Interests
+                  <textarea id="contentInterests" rows="4" placeholder="One interest per line"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="editor-section" id="opportunityContactEditorSection">
+              <div class="editor-section-head">
+                <div>
+                  <p class="editor-kicker">Contact</p>
+                  <h3>Opportunity and reach-out copy</h3>
+                </div>
+                <p class="editor-description">Customize the opportunity banner, contact information, and Gmail compose subject.</p>
+              </div>
+              <div class="editor-grid editor-grid-2">
+                <label>
+                  Opportunity Tag
+                  <input type="text" id="contentOpportunityTag" />
+                </label>
+                <label>
+                  Opportunity Button Text
+                  <input type="text" id="contentOpportunityButton" />
+                </label>
+                <label class="editor-span-2">
+                  Opportunity Heading
+                  <textarea id="contentOpportunityHeading" rows="3"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  Contact Heading
+                  <textarea id="contentContactHeading" rows="3"></textarea>
+                </label>
+                <label class="editor-span-2">
+                  Contact Intro
+                  <textarea id="contentContactIntro" rows="4"></textarea>
+                </label>
+                <label>
+                  Contact Email
+                  <input type="email" id="contentContactEmail" />
+                </label>
+                <label>
+                  Email Subject
+                  <input type="text" id="contentEmailSubject" />
+                </label>
+                <label>
+                  Phone
+                  <input type="text" id="contentContactPhone" />
+                </label>
+                <label class="editor-span-2">
+                  Address
+                  <textarea id="contentContactAddress" rows="3"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="editor-actions">
+              <button type="submit" class="btn btn-primary">Save Website Content</button>
+              <p class="admin-note" id="contentSaveNote"></p>
+            </div>
+          </form>
+        </section>
+
+        <section class="admin-panel glass admin-editor-panel" id="resumeEditorSection">
+          <div class="admin-toolbar">
+            <div>
+              <h2>Resume Upload</h2>
+              <p class="admin-helper">Upload a new PDF and the website resume links will update automatically.</p>
+            </div>
+          </div>
+
+          <form class="admin-upload-form" id="resumeUploadForm">
+            <label>
+              Current Resume File
+              <input type="text" id="currentResumeFile" readonly />
+            </label>
+
+            <label>
+              Upload New PDF Resume
+              <input type="file" id="resumeFileInput" name="resume" accept="application/pdf,.pdf" />
+            </label>
+
+            <button type="submit" class="btn btn-primary">Upload Resume</button>
+            <p class="admin-note" id="resumeUploadNote"></p>
+          </form>
+        </section>
+
+        <section class="admin-panel glass" id="inboxSection">
+          <div class="admin-toolbar">
+            <div>
+              <h2>Saved Messages</h2>
+              <p class="admin-helper">Review messages sent from the portfolio contact form.</p>
+            </div>
+            <input type="search" id="messageSearch" placeholder="Search by name, email, or message" />
+          </div>
+
+          <div class="messages-grid" id="messagesGrid"></div>
+        </section>
+
+        <div class="admin-empty glass" id="adminEmpty" hidden>
+          <h2>No messages yet</h2>
+          <p>Your contact form is ready. New submissions will appear here.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
